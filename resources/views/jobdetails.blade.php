@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-@include('includes.header')
+@extends('layout.master')
+   @section('content')
 <!-- تفاصيل الوظيفه -->
 <div class="container mt-5">
     <div class="row mt-5">
@@ -71,11 +69,11 @@
             </p>
 <p class="fw-bold btn btn-sm" style="border:1px solid #f4931e">How to Apply</p>
 <p>
-Qualified candidates meeting the above requirements are required to apply through the link: <a href="#">(Click Here)</a> 
+Qualified candidates meeting the above requirements are required to apply through the link: <a href="#">(Click Here)</a>
 not later than,
 <span class="fw-bold"> 8th, 2022.</span>
 <br>
-RECRUITMENT IS URGENT: 
+RECRUITMENT IS URGENT:
 <br>Interested candidates are encouraged to apply as soon as possible and not to wait until the
 closing date, as applications and CVs will be reviewed as they are submitted and INTERVIEWS WILL BE CONDUCTED ON A
 ROLLING BASIS.
@@ -88,10 +86,5 @@ Only shortlisted candidates will be contacted and advance to the next stage of t
 
 
     <!-- footer -->
-    
- @include('includes.footer')
-    
-    
-    </body>
-    
-    </html>
+
+     @endsection

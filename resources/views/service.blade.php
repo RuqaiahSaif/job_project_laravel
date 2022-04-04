@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-@include('includes.header')
+@extends('layout.master')
+   @section('content')
     <!--  -->
     <div class="container">
         <h5 class="my-3"> Our services</h5>
@@ -73,9 +71,4 @@
     <!-- footer -->
 
     <!-- Footer -->
-   @include('includes.footer')
-
-
-</body>
-
-</html>
+      @endsection

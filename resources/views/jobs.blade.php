@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-@include('includes.header')
+@extends('layout.master')
+   @section('content')
     <!-- الوظائف -->
     <!-- البحث -->
     <div class="container mt-5">
@@ -65,7 +63,7 @@
                     </div>
                 </div>
                 <div class="text-end">
-                    <a href="jobdetails.html"><button class="btn btn-sm bthover" style="border: 1px solid #f4931e;">
+                    <a href="{{ route('jobdetails') }}"><button class="btn btn-sm bthover" style="border: 1px solid #f4931e;">
                             More Information</button></a>
                 </div>
             </div>
@@ -99,7 +97,7 @@
                     </div>
                 </div>
                 <div class="text-end">
-                    <a href="jobdetails.html"><button class="btn btn-sm bthover" style="border: 1px solid #f4931e;">
+                    <a  href="{{ route('jobdetails') }}"><button class="btn btn-sm bthover" style="border: 1px solid #f4931e;">
                             More Information</button></a>
                 </div>
             </div>
@@ -166,7 +164,7 @@
                             </div>
                         </div>
                         <div class="text-end">
-                            <a href="jobdetails.html"><button class="btn btn-sm bthover"
+                            <a  href="{{ route('jobdetails') }}"><button class="btn btn-sm bthover"
                                     style="border: 1px solid #f4931e;">
                                     More Information</button></a>
                         </div>
@@ -180,9 +178,4 @@
 
     <!-- footer -->
 
-   @include('includes.footer')
-
-
-</body>
-
-</html>
+ @endsection

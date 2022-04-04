@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-@include('includes.header')
+@extends('layout.master')
+   @section('content')
     <!-- Wrapper container -->
     <section id="hero" class="bg-light text-dark text-center text-sm-start  py-5">
         <div class="container">
@@ -56,9 +54,4 @@
         </div>
     </section>
     <!-- Footer -->
-    @include('includes.footer')
-
-
-</body>
-
-</html>
+       @endsection
