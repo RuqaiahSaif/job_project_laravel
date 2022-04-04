@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-@include('includes.header')
+@extends('layout.master')
+   @section('content')
     <!--  -->
     <div class="container mt-5 mb-3">
         <div class="row">
@@ -57,12 +55,12 @@
                             <h6 class="mb-0">Thorya</h6>
                         </div>
                     </div>
-        
+
                 </div>
                 <div class="mt-5">
                     <h3 class="heading"> Computer Science</h3>
                     <div class="mt-5">
-        
+
                         <div class="mt-3"> <a href="profile.html"><button class="btn bthover" style="border:1px solid #f4931e">
                                     CV</button></a> </div>
                     </div>
@@ -74,10 +72,4 @@
 
     <!-- footer -->
 
-    <!-- Footer -->
-    @include('includes.footer')
-
-
-</body>
-
-</html>
+    @endsection

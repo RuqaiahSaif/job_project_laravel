@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.master')
+   @section('content')
 
-@include('includes.header')
-    <!-- سلايدر -->
+
+
+   <!-- سلايدر -->
     <section class="mb-2">
         <div class="container-fluid">
             <div class="row">
@@ -161,10 +162,8 @@
 
 
     </section>
+     @endsection
     <!-- footer -->
-@include('includes.footer')
 
 
-</body>
 
-</html>

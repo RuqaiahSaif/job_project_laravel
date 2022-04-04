@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-@include('includes.header')
+@extends('layout.master')
+   @section('content')
     <!-- compenise -->
     <div class="container my-5">
         <div class="d-flex justify-content-between border-top">
@@ -90,9 +88,4 @@
     </div>
 
     <!-- Footer -->
-  @include('includes.footer')
-
-
-</body>
-
-</html>
+ @endsection

@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-@include('includes.header')
+@extends('layout.master')
+   @section('content')
 
 
     <div class="container">
@@ -59,10 +57,8 @@
             </div>
         </div>
     </div>
-    <!-- footer -->
+       @endsection
 
-    <!-- Footer -->
-    @include('includes.footer')
     <!-- <script type="text/javascript"
                     src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
