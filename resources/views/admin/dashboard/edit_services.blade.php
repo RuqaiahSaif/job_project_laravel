@@ -18,43 +18,45 @@
   @endforeach --}}
 
             {{-- @endif --}}
-            <form class="card-body" action="{{ route('save_services') }}" method="POST" enctype="multipart/form-data">
+            <form class="card-body" action="{{ route('update_services',$services->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <h6>1. services Details</h6>
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label" for="multicol-username">services Name</label>
-                        <input name="name" type="text" id="multicol-username" class="form-control"
-                            placeholder="john.doe" />
+                        <input name="name" type="text" id="multicol-username" class="form-control" placeholder="john.doe"
+                            value="{{ $services->name }}" />
                         @error('name')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="multicol-username">services description</label>
-                        <input name="description" type="text" id="multicol-username" class="form-control" />
+                        <input name="description" type="text" id="multicol-username" class="form-control"
+                            value="{{ $services->description }}" />
                         @error('description')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="multicol-username">services image</label>
-                        <input name="image" type="file" id="multicol-username" class="form-control" />
+                        <input name="image" type="file" id="multicol-username" class="form-control"
+                            value="{{ $services->image }}" />
                         @error('image')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
 
 
-                     <div class="col-md-6">
+                    <div class="col-md-6">
               <div class="row">
                 <label class="col-sm-3 col-form-label text-sm-end" for="formtabs-country">is active</label>
                 <div class="col-sm-9">
                   <select  name="is_active" id="formtabs-country" class="select2 form-select" data-allow-clear="true">
 
-                    <option value="1">active</option>
-                    <option value="-1">nonactive</option>
+                    <option @if($services->is_active==1) selected @endif value="1">active</option>
+                    <option  @if($services->is_active==-1) selected @endif value="-1">nonactive</option>
                   </select>
                 </div>
               </div>

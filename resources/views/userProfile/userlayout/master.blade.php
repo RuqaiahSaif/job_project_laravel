@@ -17,7 +17,7 @@
 =========================================================
  -->
 <!-- beautify ignore:start -->
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="ltr" data-theme="theme-semi-dark" data-assets-path="/assets/" data-template="vertical-menu-template-semi-dark">
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="ltr" data-theme="theme-semi-dark" data-assets-path="assets/" data-template="vertical-menu-template-semi-dark">
 
 
 <!-- form-layouts-vertical.html , Sat, 26 Mar 2022 16:53:12 GMT -->
@@ -33,7 +33,7 @@
     <link rel="canonical" href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/{{asset('assets/img/favicon/favicon.ico')}}" />
+    <link rel="icon" type="image/x-icon" href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/img/favicon/favicon.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -41,31 +41,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="{{asset('assets/vendor/fonts/boxicons.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/vendor/fonts/fontawesome.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/vendor/fonts/flag-icons.css')}}" />
+    <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="{{asset('assets/vendor/css/rtl/core.css')}}" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{asset('assets/vendor/css/rtl/theme-semi-dark.css')}}" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="{{asset('assets/css/demo.css')}}" />
+    <link rel="stylesheet" href="assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="assets/vendor/css/rtl/theme-semi-dark.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/vendor/libs/typeahead-js/typeahead.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/vendor/libs/flatpickr/flatpickr.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
+    <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/flatpickr/flatpickr.css" />
+<link rel="stylesheet" href="assets/vendor/libs/select2/select2.css" />
 
     <!-- Page CSS -->
 
     <!-- Helpers -->
-    <script src="{{asset('assets/vendor/js/helpers.js')}}"></script>
+    <script src="assets/vendor/js/helpers.js"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="{{asset('assets/vendor/js/template-customizer.js')}}"></script>
+    <script src="assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="{{asset('assets/js/config.js')}}"></script>
+    <script src="assets/js/config.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -162,83 +162,73 @@
 
 
   <!-- Forms & Tables -->
-  <li class="menu-header small text-uppercase"><span class="menu-header-text">users managment</span></li>
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">personal info managment</span></li>
 
   <li class="menu-item">
-  <a href="{{ route('adminDashboard') }}" class="menu-link">
-    <div> add user</div>
+  <a href="{{ route('creatpersonal') }}" class="menu-link">
+    <div> add personal info</div>
   </a>
 </li>
 <li class="menu-item">
-  <a href="{{ route('list_users') }}" class="menu-link">
-    <div> display users</div>
+  <a href="{{ route('showpersonal') }}" class="menu-link">
+    <div> display personal info</div>
   </a>
 </li>
 
  <!-- Misc -->
-  <li class="menu-header small text-uppercase"><span class="menu-header-text">role manegmet </span></li>
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">skill manegmet </span></li>
   <li class="menu-item">
-  <a href="{{ route('add_role') }}" class="menu-link">
-    <div>add user role</div>
+  <a href="{{ route('createskill') }}" class="menu-link">
+    <div>add skill</div>
   </a>
 </li>
 <li class="menu-item">
-  <a href="{{ route('list_roles') }}" class="menu-link">
-    <div>display users roles</div>
+  <a href="{{ route('showskill') }}" class="menu-link">
+    <div>display skill</div>
   </a>
 </li>
   <!-- Misc -->
 
   <!-- Misc -->
-  <li class="menu-header small text-uppercase"><span class="menu-header-text">job manegment</span></li>
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">education manegment</span></li>
   <li class="menu-item">
   <a href="{{ route('add_job') }}" class="menu-link">
-    <div> add job</div>
+    <div> add education</div>
   </a>
 </li>
 <li class="menu-item">
   <a href="{{ route('list_jobs') }}" class="menu-link">
-    <div>display jobs</div>
+    <div>display education</div>
   </a>
 </li>
   <!-- Misc -->
-  <li class="menu-header small text-uppercase"><span class="menu-header-text"> Company Manegment</span></li>
+  <li class="menu-header small text-uppercase"><span class="menu-header-text"> experiance Manegment</span></li>
    <li class="menu-item">
   <a href="{{ route('add_company') }}" class="menu-link">
-    <div> Add Company</div>
+    <div> Add Experiance</div>
   </a>
 </li>
  <li class="menu-item">
   <a href="{{ route('list_companys') }}" class="menu-link">
-    <div> Display Companies  </div>
+    <div> Display Experiance  </div>
   </a>
 </li>
 
 
   <!-- Misc -->
-  <li class="menu-header small text-uppercase"><span class="menu-header-text">Ads Manegment</span></li>
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">cources Manegment</span></li>
   <li class="menu-item">
   <a href="{{ route('add_ads') }}" class="menu-link">
-    <div> add Ads</div>
+    <div> add cource</div>
   </a>
 </li>
 <li class="menu-item">
   <a href="{{ route('list_ads') }}" class="menu-link">
-    <div>Display Ads </div>
+    <div>Display cource </div>
   </a>
 </li>
  <!-- Misc -->
-  <li class="menu-header small text-uppercase"><span class="menu-header-text">Services manegment</span></li>
-  <li class="menu-item">
-  <a href="{{ route('add_services') }}" class="menu-link">
-    <div> add services</div>
-  </a>
-</li>
-<li class="menu-item">
-  <a href="{{ route('list_services') }}" class="menu-link">
-    <div>display services </div>
-  </a>
-</li>
+  
    <!-- Misc -->
     <!-- Misc -->
 
@@ -466,7 +456,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="{{asset('assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle')}}">
+                          <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -502,7 +492,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="{{asset('assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle')}}">
+                          <img src="assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -538,7 +528,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="{{asset('assets/img/avatars/9.png" alt class="w-px-40 h-auto rounded-circle')}}">
+                          <img src="assets/img/avatars/9.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -574,7 +564,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="{{asset('assets/img/avatars/5.png" alt class="w-px-40 h-auto rounded-circle')}}">
+                          <img src="assets/img/avatars/5.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -592,7 +582,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="{{asset('assets/img/avatars/6.png" alt class="w-px-40 h-auto rounded-circle')}}">
+                          <img src="assets/img/avatars/6.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -638,7 +628,7 @@
           <li class="nav-item navbar-dropdown dropdown-user dropdown">
             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
               <div class="avatar avatar-online">
-                <img src="{{asset('assets/img/avatars/1.png')}}" alt class="w-px-40 h-auto rounded-circle">
+                <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
               </div>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
@@ -647,7 +637,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0 me-3">
                       <div class="avatar avatar-online">
-                        <img src="{{asset('assets/img/avatars/1.png')}}" alt class="w-px-40 h-auto rounded-circle">
+                        <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
                       </div>
                     </div>
                     <div class="flex-grow-1">
@@ -739,7 +729,7 @@
       <div class="content-wrapper">
 
         <!-- Content -->
- @yield('content')
+ @yield('content1')
 
           <!-- / Content -->
 
@@ -799,31 +789,31 @@
 
 
   <!-- Core JS -->
-<!-- build:js {{asset('assets/vendor/js/core.js')}} -->
-  <script src="{{asset('assets/vendor/libs/jquery/jquery.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/popper/popper.js')}}"></script>
-  <script src="{{asset('assets/vendor/js/bootstrap.js"')}}"></script>
-  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-  <script src="{{asset('assets/vendor/libs/hammer/hammer.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/i18n/i18n.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/typeahead-js/typeahead.js')}}"></script>
+  <script src="assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
 
-  <script src="{{asset('assets/vendor/js/menu.js')}}"></script>
+  <script src="assets/vendor/js/menu.js"></script>
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/flatpickr/flatpickr.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
+  <script src="assets/vendor/libs/cleavejs/cleave.js"></script>
+<script src="assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+<script src="assets/vendor/libs/moment/moment.js"></script>
+<script src="assets/vendor/libs/flatpickr/flatpickr.js"></script>
+<script src="assets/vendor/libs/select2/select2.js"></script>
 
   <!-- Main JS -->
-  <script src="{{asset('assets/js/main.js')}}"></script>
+  <script src="assets/js/main.js"></script>
 
   <!-- Page JS -->
-  <script src="{{asset('assets/js/form-layouts.js')}}"></script>
+  <script src="assets/js/form-layouts.js"></script>
 
 </body>
 

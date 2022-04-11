@@ -17,38 +17,50 @@
     <div class="table-responsive text-nowrap">
       <table class="table table-bordered">
         <thead>
+
+
           <tr>
               <th>#</th>
             <th>usre Name </th>
             <th> user email</th>
-            <th> user role</th>
 
-            <th>statues</th>
+            {{-- <th>statues</th> --}}
 
             <th>action</th>
           </tr>
+
         </thead>
         <tbody>
 
 
-
+   @foreach ($allusers as $user  )
           <tr>
 
-            <td></td>
+            <td>{{ $user->id }}</td>
+            <td>{{ $user->name }}</td>
+             <td>{{ $user->email }}</td>
+
+{{-- @if ({{ $user->is_active==1 }})
+ <span class="badge bg-label-success me-1">active</span>
+@else
+<span class="badge bg-label-danger me-1">not active</span>
+@endif --}}
+
+
+
+             {{-- </td> --}}
             <td>
-            </td>
+              <div class="dropdown">
+              <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-2"></i> Edit</a>
+                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-2"></i> Delete</a>
+              </div>
+              </div>    </td>
 
-            <td>
-
-
-
-            </td>
-            <td>
-           
-
-            </td>
           </tr>
 
+            @endforeach
         </tbody>
       </table>
     </div>
