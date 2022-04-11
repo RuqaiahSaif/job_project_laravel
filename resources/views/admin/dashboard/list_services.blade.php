@@ -30,25 +30,38 @@
         </thead>
         <tbody>
 
+@foreach ($allservices as $serv )
+
 
 
           <tr>
 
-            <td></td>
-            <td>
-            </td>
+            <td>{{ $loop->iteration }}</td>
+            <td>{{ $serv->name }}</td>
+            <td>{{ $serv->description }}</td>
+            <td> <ul class="list-unstyled categorys-list m-0 avatar-group d-flex align-items-center">
 
-            <td>
+              <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Christina Parker">
+                <img src="{{ $serv->image }}" alt="Avatar" class="rounded-circle">
+              </li>
+            </ul></td>
+            <td>  @if($serv->is_active==1)
+            <span class="badge bg-label-success me-1">active</span>
 
+            @else
+            <span class="badge bg-label-danger me-1">nonactive</span>
+            @endif</td>
+              <td>
+              <a href="{{ route('edit_services',$serv->id) }}"class="btn btn-icon btn-outline-dribbble">
+                <i class="tf-icons bx bx-edit-alt me-1"></i>
+              </a>
+              <a href="{{ route('toggle_services',$serv->id) }}" class="btn btn-icon btn-outline-dribbble">
+                <i class="tf-icons bx bx-trash me-1"></i>
+              </a>
+                 </td>
 
-
-            </td>
-            <td>
-
-
-            </td>
           </tr>
-
+@endforeach
         </tbody>
       </table>
     </div>
