@@ -17,7 +17,7 @@ class userController extends Controller
 
  public function list_users(Request $request)
     {
-$users=User::all();
+        $users=User::all();
 
          return view('admin.dashboard.list_users')
          ->with('allusers',$users);
@@ -49,6 +49,7 @@ $users=User::all();
         $u->password=Hash::make($request->password);
         $u->email=$request->email;
         if($u->save())
+        $u->attachRole('admin');
         return redirect()->route('list_users')
         ->with(['success'=>'user created successful']);
         return back()->with(['error'=>'can not create user']);

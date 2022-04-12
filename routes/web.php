@@ -8,6 +8,8 @@ use App\Http\Controllers\jobController;
 use App\Http\Controllers\companyController;
 use App\Http\Controllers\adsController;
 use App\Http\Controllers\servicesController;
+use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\userProfileController\personalController;
 use App\Http\Controllers\userProfileController\skillController;
 
@@ -82,5 +84,17 @@ Route::post('/save_services',[servicesController::class,'store'])->name('save_se
 Route::get('/edit_services/{ser_id}',[servicesController::class,'edit_services'])->name('edit_services');
 Route::post('/update_services/{ser_id}',[servicesController::class,'update_services'])->name('update_services');
 Route::get('/toggle_services/{ser_id}',[servicesController::class,'toggle_services'])->name('toggle_services');
+
+
+// roles managment
+Route::get('/generate_roles',[SettingsController::class,'generateRoles'])->name('generate_roles');
+// register _auth
+Route::post('/register_user',[AuthController::class,'register'])->name('register_user');
+Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
+Route::get('/change-password', [AuthController::class, 'changePassword'])->name('change-password');
+Route::post('/change-password', [AuthController::class, 'updatePassword'])->name('update-password');
+
+
+
 
 
