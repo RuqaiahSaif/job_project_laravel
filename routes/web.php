@@ -31,6 +31,7 @@ use App\Http\Controllers\userProfileController\skillController;
 //      return view('layout.master');
 // });
 // basic page
+Route::get('/',[homeController::class,'home'])->name('home');
 Route::get('/index',[homeController::class,'index'])->name('index');
 Route::get('/about',[homeController::class,'about'])->name('about');
 Route::get('/acount',[homeController::class,'acount'])->name('acount');
@@ -48,6 +49,7 @@ Route::get('/signup',[homeController::class,'signup'])->name('signup');
 // personal
 Route::get('/add_personal',[ personalController::class,'add_personalInfo'])->name('creatpersonal');
 Route::get('/list_personal',[ personalController::class,'list_personalInfo'])->name('showpersonal');
+Route::post('/save_personal',[personalController::class,'store'])->name('save_personal');
 
 // skill
 Route::get('/add_skill',[ skillController::class,'add_skill'])->name('createskill');
