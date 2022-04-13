@@ -13,29 +13,45 @@
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
   <h5 class="card-header">Multi Column with Form Separator</h5>
-  <form class="card-body" action="/save_user" method="POST">
+  <form class="card-body" action="{{  route('save_personal')  }}" method="POST">
+    @csrf
     <h6>1. PERSONAL INFORMATION</h6>
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="multicol-username">Name </label>
         <input name="name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+          @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
       </div>
  <div class="col-md-6">
         <label class="form-label" for="multicol-username">EMAIL </label>
         <input name="email" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+          @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
       </div>
       <div class="col-md-6">
         <label class="form-label" for="multicol-username">PHONE </label>
         <input name="phone" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+          @error('phone')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
       </div>
        <div class="col-md-6">
         <label class="form-label" for="multicol-username">ADDRESS</label>
         <input name="address" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+          @error('address')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
       </div>
 
  <div class="col-md-6">
         <label class="form-label" for="multicol-username">GENDER</label>
         <input name="gender" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+        @error('gender')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
       </div>
 
 
